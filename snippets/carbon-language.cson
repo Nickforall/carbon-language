@@ -1,0 +1,7 @@
+'.carbon.source':
+    'Function':
+        'prefix': 'vf'
+        'body': 'var ${1:functionName} = fn($2) {\n\t$0\n}'
+    'Lambda':
+        'prefix': 'fn'
+        'body': 'fn($1) {\n\t$0\n}'

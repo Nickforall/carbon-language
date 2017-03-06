@@ -1,0 +1,14 @@
+{
+  "name": "carbon-language",
+  "version": "0.1.0",
+  "description": "Carbon language support inside Atom",
+  "keywords": [
+  ],
+  "repository": "https://github.com/nickforall/carbon-language",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "dependencies": {
+  }
+}

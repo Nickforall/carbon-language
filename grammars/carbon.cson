@@ -1,0 +1,63 @@
+fileTypes: [
+  "cb"
+]
+name: "Carbon"
+patterns: [
+  {
+    match: "\\b(if|then|else|fn|λ)\\b"
+    name: "keyword.control.keys"
+  }
+  {
+    match: "\\b(var)\\b"
+    name: "storage.type"
+  }
+  {
+    match: "\\b(println|print)\\b"
+    name: "support.function"
+  }
+  {
+    match: "\\w+(?=(\\s|)\\((.|)+\\)(|;))"
+    name: "entity.names.function"
+  }
+  {
+    begin: "\""
+    end: "\""
+    name: "string.quoted.double"
+  }
+  {
+    begin: "\'"
+    end: "\'"
+    name: "string.quoted.single"
+  }
+  {
+    begin: "#"
+    end: "(\\n|\\n\\r)"
+    name: "comment.line.number-sign"
+  }
+  {
+    match: "(?:\\b[0-9]+\\b(?!\\.))"
+    name: "constant.numeric"
+  }
+  {
+    match: '(?<!\\.)\\b(true|false)(?!\\s*:)\\b'
+    name: 'constant.language.boolean'
+  }
+  {
+    match: '(?<!\\.)\\b(null)(?!\\s*:)\\b'
+    name: 'constant.language.null'
+  }
+  {
+    match: '!==|!=|<=|>=|==|<|>'
+    name: 'keyword.operator.comparison'
+  }
+  {
+    match: '&&|\\|\\|'
+    name: 'keyword.operator.logical'
+  }
+  {
+    match: '%|\\*|/|-|\\+'
+    name: 'keyword.operator'
+  }
+]
+scope: "carbonlang"
+scopeName: "carbon.source"

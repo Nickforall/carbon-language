@@ -16,6 +16,10 @@ patterns: [
     name: "support.function"
   }
   {
+    match: "\\b(system)\\b"
+    name: "support.variable"
+  }
+  {
     match: "\\w+(?=(\\s|)\\((.|)+\\)(|;))"
     name: "entity.names.function"
   }

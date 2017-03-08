@@ -8,15 +8,19 @@ patterns: [
     name: "keyword.control.keys"
   }
   {
-    match: "\\b(var)\\b"
+    match: "\\b(let|mut|modifier)\\b"
     name: "storage.type"
   }
   {
-    match: "\\b(println|print)\\b"
-    name: "support.function"
+    match: "\\b(var|str|num|bool|arr|obj|function)\\b"
+    name: "storage.type"
   }
   {
-    match: "\\b(system)\\b"
+    match: "\\b(println|print|unixtime|unixtimemillis)\\b"
+    name: "support.function.stdroot"
+  }
+  {
+    match: "\\b(system|proc)\\b"
     name: "support.variable"
   }
   {
@@ -37,6 +41,11 @@ patterns: [
     begin: "#"
     end: "(\\n|\\n\\r)"
     name: "comment.line.number-sign"
+  }
+  {
+    begin: "//"
+    end: "(\\n|\\n\\r)"
+    name: "comment.line.double-slash"
   }
   {
     match: "(?:\\b[0-9]+\\b(?!\\.))"
